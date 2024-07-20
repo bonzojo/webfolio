@@ -28,12 +28,15 @@ export default function Home() {
           <Typewriter
             onInit={(typewriter) => {
               typewriter.typeString('')
-                .pauseFor(2000)
+                .pauseFor(4000)
                 .deleteAll()
                 .start();
+                
             }}
             options={{
               strings: ['Hello World!','I am John McEwan', 'A Web Developer from the UK'],
+              delay: 50,
+              deleteSpeed: 30,
               autoStart: true,
               loop: true,
             }}

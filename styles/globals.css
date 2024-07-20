@@ -55,7 +55,7 @@ a {
 }
 
 .animated-background {
-    background-size: 20000%;
+    background-size: 20000%; /* This is probably a bit excessive. But at the moment, doesnt show the scanlines */
     transform: translateZ(0);
     -webkit-animation: animation 12s ease-in-out infinite;
     -moz-animation: animation 12s ease-in-out infinite;
