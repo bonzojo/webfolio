@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import { TfiClip } from "react-icons/tfi";
+import Typewriter from 'typewriter-effect';
 
 export default function Home() {
   return (
@@ -10,12 +12,33 @@ export default function Home() {
       </Head>
     
       <main>
-        
-        <section className='h-screen overflow-hidden w-screen animated-background bg-gradient-to-r from-slate-800 via-sky-900 to-cyan-800'>
-          
-            <p className='font-jetbrains text-7xl text-white font-outline-4'>
-            Hello World! Why does Javascript want to make me cry? All I want is a pretty background.
-            </p>
+        {/*Section is full screen with animated background*/}        
+        <section className='h-screen min-h-screen overflow-hidden w-screen animated-background bg-gradient-to-r from-slate-800 via-sky-900 to-cyan-800'>
+          {/*Navigation Bar*/}
+          <nav className='p-2 mb-1 flex justify-between text-xl text-white font-outline-2 bg-slate-700 border border-solid border-slate-500'>
+            <ul className='flex items-center'>
+              <li><TfiClip /></li>
+              <li><a href='#'>Resume</a></li>
+              <li></li>
+            </ul>
+          </nav>
+
+          {/*Typewriter Hero*/}
+          <div className='mt-40 p-4 text-center font-jetbrains text-7xl text-white font-outline-4'>
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter.typeString('')
+                .pauseFor(2000)
+                .deleteAll()
+                .start();
+            }}
+            options={{
+              strings: ['Hello World!','I am John McEwan', 'A Web Developer from the UK'],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+          </div>
 
         </section>
       </main>
