@@ -1,95 +1,73 @@
 import Head from 'next/head';
-import { TfiClip } from "react-icons/tfi";
+import Image from 'next/image';
+import placeholder from '../public/placeholder-portrait.png';
 import Typewriter from 'typewriter-effect';
+import { TfiClip } from "react-icons/tfi";
+import { TfiLinkedin } from "react-icons/tfi";
+import { TfiGithub } from "react-icons/tfi";
+
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>John McEwan || Developer Profile</title>
-        <meta name="description" content="initial-scale=1.0, width=device-width" />
+        <title>John McEwan || Web Developer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
     
-    <main>
-      {/*Section is full screen with animated background*/}        
-      <section className='h-screen min-h-screen overflow-hidden w-screen animated-background bg-gradient-to-r from-slate-800 via-sky-900 to-cyan-800'>
-          
-          {/*Navigation Bar*/}
-          <nav className='p-2 mb-1 flex justify-between text-xl text-white font-outline-2 font-jost bg-emerald-800 border-4 border-solid border-emerald-900'>
-            <ul className='flex items-center'>
+      <main>
+        {/* Navigation Bar */}
+        <nav className='fixed w-full top-0 left-0 z-50 bg-emerald-800 border-b-4 border-solid border-emerald-900'>
+          <div className='p-2 flex justify-between text-xl text-white font-outline-2 font-jost'>
+            <ul className='flex items-center space-x-4'>
               <li><TfiClip /></li>
-              <li><a href='#'>Resume</a></li>
-              <li></li>
+              <li><a href='#' className='hover:underline'>Resume</a></li>
+              <li><TfiLinkedin /></li>
+              <li><a href='#' className='hover:underline'>Linkedin</a></li>
+              <li><TfiGithub /></li>
+              <li><a href='#' className='hover:underline'>Github</a></li>
             </ul>
-          </nav>
-
-          {/*Typewriter Hero*/}
-          <div className='mt-40 p-4 text-center font-jetbrains text-7xl text-white font-outline-4 '>
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter.typeString('')
-                .pauseFor(4000)
-                .deleteAll()
-                .start();
-                
-            }}
-            options={{
-              strings: ['Hello World!','I\'m John McEwan', 'UK based Web Developer'],
-              delay: 50,
-              deleteSpeed: 30,
-              autoStart: true,
-              loop: true,
-            }}
-          />
           </div>
+        </nav>
 
-        {/*Animated Blend --- Experiment with values to get a nice aesthetic */}        
-        <div className='flex items-center justify-center'>
+        {/*Background*/}
+        <section className='relative m-0 p-0 h-screen w-full min-h-screen bg-gradient-to-r animated-background from-slate-800 via-sky-900 to-cyan-800'>
           
-          <div className='absolute w-full max-w-7xl'>
-            <div className='absolute -top-32 w-full h-40 bg-slate-300 rounded-full mix-blend-multiply border-4 border-black shadow-2xl'></div>
+        {/*Portrait */}
+        <Image src={placeholder} className='absolute mt-28 p-4 left-4 sm:w-1/3 md:w-1/3 lg:w-1/3 xl:w-1/3'/>
 
-            {/* Experiment with values & add animation, transform, scale, keyframes etc for a nice effect 
-            
-            <div className='absolute top-10 -left-12 w-40 h-40 bg-red-300 rounded-lg mix-blend-multiply'></div>
-            <div className='absolute top-10 -right-10 w-80 h-80 bg-green-300 rounded-full mix-blend-multiply filter blur-lg'></div>
-            <div className='absolute top-10 left-48 w-80 h-80 bg-blue-300 rounded-3xl mix-blend-multiply '></div>
-            
-            */}
-
+          {/* Typewriter Hero */}
+          <div className='absolute mt-28 p-4 font-jetbrains text-white text-base sm:text-4xl sm:font-outline-4 md:text-5xl lg:text-6xl xl:text-7xl right-16'>
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter.typeString('')
+                  .pauseFor(4000)
+                  .deleteAll()
+                  .start();
+              }}
+              options={{
+                strings: ['Hello World!', 'I\'m John McEwan', 'Web Developer', 'Saxophonist', 'Dog Lover'],
+                delay: 50,
+                deleteSpeed: 30,
+                autoStart: true,
+                loop: true,
+              }}
+            />
           </div>
-        </div>
         </section>
-        <section className='bg-yellow-100'>
-        <hr></hr>
-        <p className='font-jost'>
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-        </p>
-        <p className='font-jetbrains'>
-          <br/>
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.
-          The quick brown fox jumped over the lazy dog.   
-        </p>
+
+        {/* Main Content */}
+        <section>
+          <div className='h-screen bg-slate-900 text-white font-jetbrains p-24'>
+            <p>The quick brown fox jumped over the lazy dog.</p>
+            <p>The quick brown fox jumped over the lazy dog.</p>
+            <p>The quick brown fox jumped over the lazy dog.</p>
+            <p>The quick brown fox jumped over the lazy dog.</p>
+            <p>The quick brown fox jumped over the lazy dog.</p>
+          </div>
         </section>
       </main>
     </div>
-    
   );
-}
-
+};
