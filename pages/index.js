@@ -28,18 +28,27 @@ export default function Home() {
     
     <main>
       {/* Navigation Bar */}
-      <nav className='fixed w-full top-0 left-0 z-50 bg-stone-700 border-b-4 border-solid border-stone-800'>
+      <nav className='fixed w-full top-0 left-0 z-50 bg-stone-800 border-2 border-solid border-stone-900'>
         <div className='p-2 flex justify-between text-xl text-white font-outline-2 font-jost'>
-          <ul className='flex items-center space-x-4'>
-            <li><TfiClip /></li>
-            <li><a href='#' className='hover:underline'>Resume</a></li>
-            <li><TfiLinkedin /></li>
-            <li><a href='#' className='hover:underline'>Linkedin</a></li>
-            <li><TfiGithub /></li>
-            <li><a href='#' className='hover:underline'>Github</a></li>
+          <div className='flex-1'></div>
+          <ul className='flex items-center space-x-12 pr-24'>
+            <li className='flex items-center space-x-2'>
+              <TfiClip />
+              <a href='#' className='hover:underline'>Resume</a>
+            </li>
+            <li className='flex items-center space-x-2'>
+              <TfiLinkedin />
+              <a href='#' className='hover:underline'>Linkedin</a>
+            </li>
+            <li className='flex items-center space-x-2'>
+              <TfiGithub />
+              <a href='#' className='hover:underline'>Github</a>
+            </li>
           </ul>
         </div>
       </nav>
+
+
 
       {/*Background*/}
       <section className='relative m-0 p-0 h-screen w-full min-h-screen bg-gradient-to-r animated-background from-slate-800 via-sky-900 to-cyan-800'>
@@ -74,7 +83,7 @@ export default function Home() {
           />
           </div>
 
-          <p className='absolute mt-64 p-24 py-16 -left-16 text-white font-jetbrains text-base sm:py-24 sm:text-1xl md:py-36 md:text-2xl lg:py-60 lg:text-3xl'>This is a little bit of blurb introducing myself in a summary that manages to cover a
+          <p className='absolute font-jetbrains mt-64 p-24 py-16 -left-16 text-white text-base sm:py-24 sm:text-1xl md:py-36 md:text-2xl lg:py-60 lg:text-3xl xl:py-80 xl:text-4xl'>This is a little bit of blurb introducing myself in a summary that manages to cover a
           few lines, making up a paragraph. Talk about the key points of your skills and your interests.
         </p>
       </section>
