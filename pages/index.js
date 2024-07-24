@@ -94,7 +94,17 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Main Content */}
+      {/* Projects */}
+      <section className='h-screen bg-slate-700'>
+      <h3 className=' py-12 text-center font-jetbrains text-6xl text-white'>Projects</h3>
+        <div className='p-24 inline-block items-center lg:flex justify-between'>
+          <div className='relative mt-8 h-72 w-72 bg-black'></div>
+          <div className='relative mt-8 h-72 w-72 bg-black'></div>
+          <div className='relative mt-8 h-72 w-72 bg-black'></div>
+        </div>
+      </section>
+
+      {/* Tech Stack and Skills Content */}
       <section className='h-screen bg-slate-900'>
 
         <div className='text-white font-jetbrains p-24'>
