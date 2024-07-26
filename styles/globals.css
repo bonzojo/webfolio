@@ -34,7 +34,7 @@ a {
 }
 
 section, footer {
-  overflow: scroll;
+  overflow: auto;
 }
 
 * {

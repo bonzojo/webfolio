@@ -28,7 +28,7 @@ export default function Home() {
       <Head>
         <title>John McEwan || Web Developer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/sherb.ico" />
       </Head>
     
     <main>
@@ -62,7 +62,7 @@ export default function Home() {
       <Image src={john} className='absolute mt-20 p-4 left-4 w-48 sm:w-1/3 md:w-1/3 lg:w-1/3 xl:w-1/3'/>
 
       {/* Typewriter Hero */}
-        <div className='absolute mt-28 p-4 font-jetbrains text-white text-base sm:text-4xl sm:font-outline-4 md:text-5xl lg:text-7xl right-16'>
+        <div className='absolute mt-20 p-4 font-jetbrains text-white text-base sm:text-4xl sm:font-outline-4 md:text-5xl lg:text-7xl right-16'>
           <Typewriter
             onInit={(typewriter) => {
               typewriter.typeString('')
