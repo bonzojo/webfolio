@@ -104,3 +104,39 @@ section {
     line-height: 0.8em;
   }
 }
+
+/* Resume Styling */
+.resumeBody{
+  text-align: center;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  border: solid 0.4em goldenrod;
+  font-size: 1.2em;
+  font-family: 'jetbrains';
+}
+
+#email {
+  text-decoration: none;
+  color: red;
+  font-size: 1.4em;
+}
+
+#email:hover{
+  color: blue;
+}
+
+.tableStyle {
+  border: 0.2em solid black;
+  margin: 2em;
+
+}
+
+.tableHeadStyle {
+  border: 0.2em solid black;
+  padding: 0.2em;
+}
+
+tr, td{
+  border: 0.2em solid goldenrod;
+  padding: 0.6em;
+}

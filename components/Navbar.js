@@ -1,5 +1,6 @@
 import React from "react";
 import { TfiClip, TfiLinkedin, TfiGithub } from "react-icons/tfi";
+import Link from "next/link";
 
 const Navbar = () => {
     return(
@@ -9,7 +10,7 @@ const Navbar = () => {
           <ul className='flex items-center space-x-12 pr-24'>
             <li className='flex items-center space-x-2'>
               <TfiClip />
-              <a href='#' className='hover:underline'>Resume</a>
+              <Link href='./resume' target="_blank" className='hover:underline'>Resume</Link>
             </li>
             <li className='flex items-center space-x-2'>
               <TfiLinkedin />
